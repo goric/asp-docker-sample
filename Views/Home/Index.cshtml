@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h3 class="display-4">Welcome</h3>
+
+    @if(Context?.User?.Identity?.Name == null)
+    {
+        <h5>User is not authenticated</h5>
+    }
+
+    <h5>This page was served by @ViewBag.ServedBy running on @Environment.OSVersion</h5>
+
+</div>
